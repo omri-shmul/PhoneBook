@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+    <script src="dbconnect.js"></script>
+    <meta charset="utf-8" />
+    <title>Phone Book</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <section class="sidebar">
+            <button type="submit" id="submit"><strong>Submit</strong></button>
+            <br />
+            <button id="update"><strong>Update</strong></button>
+            <br />
+            <button id="delete"><strong>Delete</strong></button>
+            <br />
+            <button id="search"><strong>Search</strong></button>
+        </section>
+
+        <section class="main-content">
+            <div class="boxes">
+                <h1>Phone Book Listing</h1>
+                <div class="textbox">
+                    <input type="text" placeholder="First Name" id="fname" />
+                    <input type="text" placeholder="Last Name" id="lname" />
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="ID Number" id="id" />
+                    <input type="text" placeholder="Phone Number" id="phone" />
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="City" id="city" />
+                    <input type="text" placeholder="Street" id="street" />
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Number" id="snum" />
+                    <input type="text" placeholder="Floor Number" id="fnum" />
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Apartment Number" id="apnum" />
+                    <input type="email" placeholder="Email" id="email" />
+                </div>
+            </div>
+        </section>
+
+        <section class="footer"></section>
+    </div>
+
+   
+    <script src="logics.js"></script>
+</body>
+
+</html>

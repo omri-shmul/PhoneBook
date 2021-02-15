@@ -1,5 +1,8 @@
-﻿// Get all data from the form
-var email, fname, lname, phone, city, street, snum, fnum, apnum, id;
+// Get all data from the form
+let email, fname, lname, phone, city, street, snum, fnum, apnum, id;
+const inputs = document.querySelectorAll('input');
+const mail = document.getElementById('email');
+
 
 function Start() {
     email = document.getElementById('email').value;
@@ -13,6 +16,23 @@ function Start() {
     fnum = document.getElementById('fnum').value;
     apnum = document.getElementById('apnum').value;
 }
+
+function clearFields() {
+    inputs.forEach(input => input.value = '');
+}
+
+function validateEmail(e) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const isValid = re.test(e.target.value);
+    if (!isValid && e.target.value) {
+        mail.classList.add('error')
+    } else {
+        mail.classList.remove('error')
+    }
+}
+
+mail.addEventListener('input', validateEmail);
+
 
 document.getElementById("submit").onclick = function () {
     Start();
@@ -28,6 +48,7 @@ document.getElementById("submit").onclick = function () {
         apartment_num: apnum,
         id_d: id
     });
+    clearFields();
 }
 
 document.getElementById("search").onclick = function () {
@@ -58,9 +79,11 @@ document.getElementById("update").onclick = function () {
         floor_num: fnum,
         apartment_num: apnum
     });
+    clearFields();
 }
 
 document.getElementById("delete").onclick = function () {
     Start();
     firebase.database().ref("Person/" + id).remove();
+    clearFields();
 }

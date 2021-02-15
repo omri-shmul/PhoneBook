@@ -1,4 +1,4 @@
-﻿* {
+* {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
@@ -23,13 +23,13 @@ a {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #222831;
+    background-color: #222831 ;
     padding: 2rem 0;
     text-align: center;
 }
 
 button {
-     background-color: #222831;
+    background-color: #222831;
     text-align: center;
     font-size: 1.2em;
     height: 40px;
@@ -93,5 +93,9 @@ button {
 .footer {
     grid-area: footer;
     background-color: #f88f01;
+}
+
+.error {
+    background-color: darkred !important;
 }
 

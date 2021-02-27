@@ -23,9 +23,8 @@ a {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #222831 ;
+    background-color: #222831;
     padding: 2rem 0;
-    text-align: center;
 }
 
 button {
@@ -92,6 +91,7 @@ button {
 
 .footer {
     grid-area: footer;
+    background: url('Images/Footer.jpg') center no-repeat;
     background-color: #f88f01;
     padding: 3px;
 }
@@ -111,7 +111,9 @@ td, th {
 
 th {
     font-weight: bold;
+    background: url('Images/plain-black-19.jpg') center no-repeat;
     text-align: center;
+    color: white;
 }
 
 .error {

@@ -23,6 +23,7 @@ a {
 
 .sidebar {
     grid-area: sidebar;
+    text-align: center;
     background-color: #222831;
     padding: 2rem 0;
 }

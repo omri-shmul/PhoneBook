@@ -97,6 +97,11 @@ button {
     padding: 3px;
 }
 
+.table_all {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 table {
     border-collapse: collapse;
     width: 70%;
